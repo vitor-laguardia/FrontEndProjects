@@ -1,3 +1,16 @@
+/* Master styles */
+
+body {
+ margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* nav styles */
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -32,4 +45,57 @@
 
 .nav-link-wrapper a:hover {
     color: black; 
+}
+
+/* Portfolio styles */
+
+.portfolio-items-wrapper {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;/*para usarmos o position absolute, tinhamos que ter usado o position relative no seu parente. Para forçarmos uma condição de sobreposição.*/
+    top: 0; /*queremos que o texto esteja posicionado ao topo maximo*/
+    display: flex;
+    flex-direction: column;/*centralizar os itens*/
+    justify-content: center;/*centralizar eles da esquerda para a direita*/
+    align-items: center;/*centralizar top ao bottom*/
+    height: 100%;/*queremos utilizar 100% da altura do parente*/
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    color: transparent;
+    font-weight: 600;/*evitar que a fonte passe do tamanho normal para 600 do hover*/
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
 }
