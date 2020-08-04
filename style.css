@@ -7,6 +7,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr;
+    font-family: 'Lato',sans-serif;
 }
 
 /* nav styles */
@@ -45,6 +46,14 @@ body {
 
 .nav-link-wrapper a:hover {
     color: black; 
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important; /*devemos sobrescrever a opçao default*/
 }
 
 /* Portfolio styles */
@@ -98,4 +107,23 @@ body {
 .img-darken {
     transition: 1s;
     filter: brightness(10%);
+}
+
+/* About page */
+
+.two-columns-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
 }
